@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soonpage.stux.games/sitemap.xml
