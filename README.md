@@ -42,6 +42,10 @@ through `.github/workflows/pages.yml`.
 
 This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release.
 
+## Tests
+
+Run `bash tests/version.sh` and `bash tests/site.sh` (Python 3.8+, no dependencies). The second checks the Discord link previews and the icon set. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Copyright
 
 Copyright © 2026 Stux.Group. All rights reserved. Oxanium is © The Oxanium Project Authors,

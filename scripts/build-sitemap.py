@@ -6,6 +6,9 @@ The page list is PAGES below; each page's <lastmod> is the date of the last git 
 touched its source file (left out if the file has no history yet). URLs always use BASE_URL,
 the site's production address.
 
+It then runs build-discord-embeds.py, so every page's Discord preview (the sitemap page's
+included) is current.
+
 Copyright (c) Stux.Group. All Rights Reserved. Stux.Games is operated by Stux Group Ltd.
 """
 import html
@@ -105,6 +108,14 @@ def main() -> None:
         text = text.rstrip("\n") + "\n\n" + line + "\n"
     robots.write_text(text, encoding="utf-8", newline="\n")
     print(f"Wrote sitemap.xml, sitemap/index.html and robots.txt for {BASE_URL} ({len(PAGES)} pages)")
+    # Every page's Discord preview, including the sitemap page just written.
+    import importlib.util
+    import sys
+    sys.dont_write_bytecode = True  # no __pycache__ in the site
+    spec = importlib.util.spec_from_file_location("build_discord_embeds", Path(__file__).resolve().parent / "build-discord-embeds.py")
+    embeds = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(embeds)
+    embeds.main([])
 
 
 if __name__ == "__main__":
