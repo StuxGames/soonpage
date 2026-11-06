@@ -1,9 +1,27 @@
 # Changelog
 
-All notable changes to the Stux.Games Coming Soon Page are documented here.
+All notable changes to Stux.Games Soonpage are documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/).
+
+## v26.11.06-1
+
+### Fixed
+
+- CI's `html-validate` step failed on the `discord:component-embed` id, which Discord needs for the link preview: the
+  `valid-id` rule now runs in relaxed mode, which allows the colon
+
+## v26.11.06
+
+### Added
+
+- A `.gitignore` that keeps Python's `__pycache__/` out of the repo
+
+### Changed
+
+- Its name is now **Stux.Games Soonpage** throughout (it was Coming Soon Page), in the README, CONTRIBUTING and this changelog, matching the
+  name used on games.stux.games and status.stux.games
 
 ## v26.10.26
 

@@ -2,7 +2,7 @@
   <picture><source media="(prefers-color-scheme: dark)" srcset="https://global.media.stux.games/logo-light.png"><source media="(prefers-color-scheme: light)" srcset="https://global.media.stux.games/logo-dark.png"><img src="https://global.media.stux.games/logo-dark.png" height="100" alt="Stux.Games Logo"></picture>
 </p>
 
-# Coming Soon Page
+# Stux.Games Soonpage
 
 The "coming soon" page for Stux.Games games and sites that haven't launched yet.
 
